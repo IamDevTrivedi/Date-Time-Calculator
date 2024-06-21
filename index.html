@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date & Time - Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+
+            <div class="setting">
+                <div id="title">
+                    Date & Time Calculator
+                </div>
+                <div id="menu-toggle">&#9776;</div>
+            </div>
+            <div id="option-list">
+                <ul>
+                    <li id="1">Count Day Gap</li>
+                    <li id="2">Add Days</li>
+                    <li id="3">Day of Date</li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <div class="interface">
+        <div id="option-0" class="main-content">
+            <h1>Welcome to the Date & Time Calculator</h1>
+            <p>Whether you need to calculate the difference between two dates, add or subtract days from a specific
+                date, or find out the day of the week for any given date, our Date & Time Calculator is here to help you
+                with various time-related calculations. Simply select one of the options from the menu above to get
+                started!</p>
+            <div id="output-option-0">
+
+            </div>
+        </div>
+
+        <div id="count-day-gap" class="hidden">
+            <div class="input">
+                <div>
+                    <label for="from-date">Enter Start date: </label>
+                    <input type="date" id="from-date">
+                </div>
+                <div>
+                    <label for="to-date">Enter End date: &nbsp;</label>
+                    <input type="date" id="to-date">
+                </div>
+            </div>
+            <button id="button-1">Calculate</button>
+            <div id="output-option-1"></div>
+        </div>
+
+        <div id="add-day" class="hidden">
+            <div class="input">
+                <div>
+                    <label for="date-3">Enter Date: </label>
+                    <input type="date" id="date-3">
+                </div>
+                <div>
+                    <label for="add-sub">Action: </label>
+                    <select name="add-sub" id="add-sub">
+                        <option value="add">Add Days</option>
+                        <option value="subtract">Subtract Days</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="num-days">Enter Number of Days: </label>
+                    <input type="number" id="num-days" min="1">
+                </div>
+            </div>
+            <button id="button-2">Calculate</button>
+            <div id="output-option-2"></div>
+        </div>
+
+        <div id="day-of-date" class="hidden">
+
+            <div class="input">
+                <div>
+                    <label for="date-4">Enter the Date: </label>
+                    <input type="date" name="" id="date-4">
+                </div>
+            </div>
+            <button id="button-3">Calculate</button>
+            <div id="output-option-3"></div>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        document.getElementById('menu-toggle').addEventListener('click', function () {
+            var optionList = document.getElementById('option-list');
+            if (optionList.classList.contains('active')) {
+                optionList.classList.remove('active');
+            } else {
+                optionList.classList.add('active');
+            }
+        });
+
+    </script>
+</body>
+</html>
